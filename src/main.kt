@@ -2,6 +2,17 @@ import java.util.Scanner
 
 fun main() {
 
+    println("Simple addidng")
+    println("i = 25 and j = 32")
+
+    var i = 25
+    var j = 32
+    val add = { i: Int, j: Int -> i + j }
+    val sub = { i: Int, j: Int -> i - j }
+
+    println(math(i, j, add))
+    println(math(i, j, sub))
+
 
     val reader = Scanner(System.`in`)
     print("Enter a whole number: ")
@@ -27,10 +38,10 @@ fun main() {
                 println("is greater than 21")
 
             }
+
+
         }
 
-
-        println("result ${result}")
     } catch (e: Exception) {
         println("It is not a whole number")
         main()
@@ -63,7 +74,7 @@ fun main() {
     fun complexEquasion() {
         val equa: (Double) -> Double = { x: Double -> x * (Math.pow(Math.E, (-1 * (Math.PI / 2)))) }
 
-        println("i to the power of i is equal to " + (Math.pow(Math.E, (-1 * (Math.PI / 2))))+" and is real")
+        println("i to the power of i is equal to " + (Math.pow(Math.E, (-1 * (Math.PI / 2)))) + " and is real")
 
 
         var x = Math.random() * 10
@@ -75,4 +86,9 @@ fun main() {
 
     complexEquasion()
 
+
+}
+
+fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
+    return f(i, j)
 }
