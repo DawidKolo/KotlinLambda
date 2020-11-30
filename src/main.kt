@@ -1,5 +1,3 @@
-import java.lang.Math.abs
-import java.lang.Math.exp
 import java.util.Scanner
 
 fun main() {
@@ -56,15 +54,19 @@ fun main() {
 
 
     println("And now, we will try something more advanced")
+    println("")
+    println("i is equal to square root of -1")
+    println("So if i stand for imaginary number,")
+    println("is the i to the power of i real or imaginary?")
+    println("")
+
+    fun complexEquasion() {
+        val equa: (Double) -> Double = { x: Double -> x * (Math.pow(Math.E, (-1 * (Math.PI / 2)))) }
+
+        println("i to the power of i is equal to " + (Math.pow(Math.E, (-1 * (Math.PI / 2))))+" and is real")
 
 
-    fun complexEquasion(){
-        val equa: (Double)->Double = {x:Double -> x * (Math.pow(Math.E,(-1* (Math.PI/2))))}
-
-        println((Math.pow(Math.E,(-1* (Math.PI/2)))))
-
-
-        var x = Math.random()*10
+        var x = Math.random() * 10
 
         val res = equa(x)
         println("The value of $x * i ^ i is ${res}")
