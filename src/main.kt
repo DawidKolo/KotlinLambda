@@ -35,4 +35,19 @@ fun main() {
             println("It is not a whole number")
             main()
         }
+
+                val readerA = Scanner(System.`in`)
+                println("Enter a whole number: ")
+                try {
+                    val y = readerA.nextInt()
+                    var q = when(y){
+                        0 -> 5
+                        in 123..500->6
+                        else->777
+                    }
+                    println("Number q is ${q}")
+                }catch (e: Exception){
+                    println("You haven't entered an integer")
+                    main()
+                }
     }
