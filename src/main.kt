@@ -16,11 +16,11 @@ fun main() {
 
                 }
                 1, 2, 3, 4, 5, 6 -> {
-                    println("x belongs to the set of {1,2,3,4,5,6} ")
+                    println("x belongs to the set of integers {1 to 6} ")
 
                 }
                 in 8..20 -> {
-                    println("x is in the range of 8..20")
+                    println("x is within the range of 8..20")
 
                 }
                 else -> {
