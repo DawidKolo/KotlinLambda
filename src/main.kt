@@ -32,7 +32,7 @@ fun main() {
         var x = reader.nextInt()
 
 
-        val result = when (x) {
+        when (x) {
             0 -> {
                 println("x is equal to zero")
 
@@ -99,7 +99,7 @@ fun main() {
 
     complexEquasion()
 
-    pointC()                    
+    pointC()
 
     numberToString()
 
