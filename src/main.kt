@@ -2,23 +2,28 @@ import java.util.Scanner
 
 fun main() {
 
-    println("Simple addidng")
+    println("Simple sum")
     println("Please enter an integer")
-    val addReader = Scanner(System.`in`)
-    var i = addReader.nextInt()
+    try {
+        val addReader = Scanner(System.`in`)
+        var i = addReader.nextInt()
 
-    println("Please enter another integer")
-    var j = addReader.nextInt()
+        println("Please enter another integer")
+        var j = addReader.nextInt()
 
 
-    val add = { i: Int, j: Int -> i + j }
-    val sub = { i: Int, j: Int -> i - j }
-    val div = { i: Int, j: Int -> i / j.toDouble() }
+        val add = { i: Int, j: Int -> i + j }
+        val sub = { i: Int, j: Int -> i - j }
+        val div = { i: Int, j: Int -> i / j.toDouble() }
 
-    println("The sum of your numbers is: " + math(i, j, add))
-    println("The result of subtraction is: " + math(i, j, sub))
-    println("The result of division is: " + mathDouble(i, j, div))
-
+        println("The sum of your numbers is: " + math(i, j, add))
+        println("The result of subtraction is: " + math(i, j, sub))
+        println("The result of division is: " + mathDouble(i, j, div))
+    }catch (e: Exception){
+        println("Something has gone wrong. Please make sure you entered an integer")
+        main()
+    }
+    pointA()
 
     val reader = Scanner(System.`in`)
     print("Enter a whole number: ")
@@ -50,9 +55,9 @@ fun main() {
 
     } catch (e: Exception) {
         println("It is not a whole number")
-        main()
+        pointA()
     }
-
+    pointB()
     val readerA = Scanner(System.`in`)
     println("Enter a whole number: ")
     try {
@@ -60,14 +65,14 @@ fun main() {
         var q = when (y) {
             0 -> 5
             in 123..500 -> 6
-            1,2,3,4->666
+            1, 2, 3, 4 -> 666
             else -> 777
         }
         println("Number q is ${q}")
 
     } catch (e: Exception) {
         println("You haven't entered an integer")
-        main()
+        pointB()
     }
 
 
@@ -94,14 +99,21 @@ fun main() {
 
     complexEquasion()
 
-
-
-
-
+    pointC()                    
 
     numberToString()
 
+}
 
+// Function defined below
+
+fun pointA() {
+
+}
+fun pointB() {
+
+}
+fun pointC() {
 
 }
 
@@ -113,23 +125,27 @@ fun mathDouble(i: Int, j: Int, f: (Int, Int) -> Double): Double {
     return f(i, j)
 }
 
-fun numberToString(){
-    println("Please enter an your name")
-    val name = Scanner(System.`in`)
-    var a = name.next()
+fun numberToString() {
+    try {
+        println("Please enter an your name")
+        val name = Scanner(System.`in`)
+        var a = name.next()
 
-    println("Please enter an integer")
-    var b = name.nextInt()
+        println("Please enter an integer")
+        var b = name.nextInt()
 
-    println("Please enter another number")
-    var c = name.nextInt().toDouble()
+        println("Please enter another number")
+        var c = name.nextInt().toDouble()
 
-    val f:(String,Int,Double)->String = {
-            a:String,b:Int,c:Double->
-        println("Hello "+a+" There is "+b*c+" PLN on your account")
-        "$a $b $c"
+        val f: (String, Int, Double) -> String = { a: String, b: Int, c: Double ->
+            println("Hello " + a + " There is " + b * c + " PLN on your account")
+            "$a $b $c"
+        }
+
+        println(f(a, b, c))
+    }catch (e: Exception){
+        println("Try again")
+        pointC()
     }
-
-    println(f(a,b,c))
 }
 
