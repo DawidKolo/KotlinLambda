@@ -6,28 +6,37 @@ fun main() {
 
     println("Where would you like to start? ")
     println("Type 1 to start from begin. \n2 to jump to the second starting point\n3 to jump to the third starting point.\nAnd finally, 4 if you wish to play with the last function ")
-try {
-    val menu = Scanner(System.`in`)
-    when (menu.nextInt()) {
-        1 -> pointA()
-        2 -> pointB()
-        3 -> pointC()
-        4 -> pointD()
-        else -> exitProcess(0)
-    }
-}catch (e: Exception){
-    println("Please try again")
-    main()
-}
-    pointA()
 
+    try {
+        val menu = Scanner(System.`in`)
+        when (menu.nextInt()) {
+            1 -> pointA()
+            2 -> pointB()
+            3 -> pointC()
+            4 -> pointD()
+            else -> exitProcess(0)
+        }
+    } catch (e: Exception) {
+        println("Please try again")
+        main()
+    }
+    numberToString()
+}
+
+// Function defined below
+
+
+fun pointA() {
     println("Simple sum")
     println("Please enter an integer")
+
+
     try {
         val addReader = Scanner(System.`in`)
         val i = addReader.nextInt()
 
         println("Please enter another integer")
+
         val j = addReader.nextInt()
 
 
@@ -42,8 +51,9 @@ try {
         println("Something has gone wrong. Please make sure you entered an integer")
         pointA()
     }
-    pointB()
+}
 
+fun pointB() {
     val reader = Scanner(System.`in`)
     print("Enter a whole number: ")
 
@@ -75,7 +85,9 @@ try {
         println("It is not a whole number")
         pointB()
     }
-    pointC()
+}
+
+fun pointC() {
     val readerA = Scanner(System.`in`)
     println("Enter a whole number: ")
     try {
@@ -91,8 +103,9 @@ try {
         println("You haven't entered an integer")
         pointC()
     }
+}
 
-
+fun pointD() {
     println("And now, we will try something more advanced")
     println("")
     println("i is equal to square root of -1")
@@ -113,25 +126,8 @@ try {
         println("The value of $x * i ^ i is $res")
 
     }
-
     complexEquation()
-
-    pointD()
-
-    numberToString()
-
-
 }
-
-// Function defined below
-
-fun pointA() = Unit
-
-fun pointB() = Unit
-fun pointC() = Unit
-fun pointD() = Unit
-
-
 
 
 fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
@@ -155,7 +151,7 @@ fun numberToString() {
     val c = name.nextDouble()
 
     val f: (String, Int, Double) -> String = { a: String, b: Int, c: Double ->
-        println("Hello " + a + "! \n There is " + b * c + " PLN on your account")
+        println("Hello " + a + "! \n1There is " + b * c + " PLN on your account")
         "$a $b $c"
     }
 
