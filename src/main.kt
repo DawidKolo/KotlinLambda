@@ -3,15 +3,21 @@ import java.util.Scanner
 fun main() {
 
     println("Simple addidng")
-    println("i = 25 and j = 32")
+    println("Please enter an integer")
+    val addReader = Scanner(System.`in`)
+    var i = addReader.nextInt()
 
-    var i = 25
-    var j = 32
+    println("Please enter another integer")
+    var j = addReader.nextInt()
+
+
     val add = { i: Int, j: Int -> i + j }
     val sub = { i: Int, j: Int -> i - j }
+    val div = { i: Int, j:Int ->  i/j.toDouble() }
 
-    println(math(i, j, add))
-    println(math(i, j, sub))
+    println("The sum of your numbers is: "+math(i, j, add))
+    println("The result of subtraction is: "+math(i, j, sub))
+    println("The result of division is: "+mathDouble(i, j, div))
 
 
     val reader = Scanner(System.`in`)
@@ -92,3 +98,8 @@ fun main() {
 fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
     return f(i, j)
 }
+
+fun mathDouble(i: Int, j:Int, f:(Int, Int) -> Double): Double {
+    return f(i, j)
+}
+
