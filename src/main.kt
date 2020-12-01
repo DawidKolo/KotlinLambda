@@ -1,7 +1,25 @@
 import java.util.Scanner
 import kotlin.math.pow
+import kotlin.system.exitProcess
 
 fun main() {
+
+    println("Where would you like to start? ")
+    println("Type 1 to start from begin. \n2 to jump to the second starting point\n3 to jump to the third starting point.\nAnd finally, 4 if you wish to play with the last function ")
+try {
+    val menu = Scanner(System.`in`)
+    when (menu.nextInt()) {
+        1 -> pointA()
+        2 -> pointB()
+        3 -> pointC()
+        4 -> pointD()
+        else -> exitProcess(0)
+    }
+}catch (e: Exception){
+    println("Please try again")
+    main()
+}
+    pointA()
 
     println("Simple sum")
     println("Please enter an integer")
@@ -22,9 +40,9 @@ fun main() {
         println("The result of division is: " + mathDouble(i, j, div))
     } catch (e: Exception) {
         println("Something has gone wrong. Please make sure you entered an integer")
-        main()
+        pointA()
     }
-    pointA()
+    pointB()
 
     val reader = Scanner(System.`in`)
     print("Enter a whole number: ")
@@ -55,9 +73,9 @@ fun main() {
 
     } catch (e: Exception) {
         println("It is not a whole number")
-        pointA()
+        pointB()
     }
-    pointB()
+    pointC()
     val readerA = Scanner(System.`in`)
     println("Enter a whole number: ")
     try {
@@ -71,7 +89,7 @@ fun main() {
 
     } catch (e: Exception) {
         println("You haven't entered an integer")
-        pointB()
+        pointC()
     }
 
 
@@ -98,26 +116,22 @@ fun main() {
 
     complexEquation()
 
-
+    pointD()
 
     numberToString()
-    pointC()
+
 
 }
 
 // Function defined below
 
-fun pointA() {
+fun pointA() = Unit
 
-}
+fun pointB() = Unit
+fun pointC() = Unit
+fun pointD() = Unit
 
-fun pointB() {
 
-}
-
-fun pointC() {
-
-}
 
 
 fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
@@ -141,7 +155,7 @@ fun numberToString() {
     val c = name.nextDouble()
 
     val f: (String, Int, Double) -> String = { a: String, b: Int, c: Double ->
-        println("Hello " + a + " There is " + b * c + " PLN on your account")
+        println("Hello " + a + "! \n There is " + b * c + " PLN on your account")
         "$a $b $c"
     }
 
