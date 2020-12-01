@@ -13,11 +13,11 @@ fun main() {
 
     val add = { i: Int, j: Int -> i + j }
     val sub = { i: Int, j: Int -> i - j }
-    val div = { i: Int, j:Int ->  i/j.toDouble() }
+    val div = { i: Int, j: Int -> i / j.toDouble() }
 
-    println("The sum of your numbers is: "+math(i, j, add))
-    println("The result of subtraction is: "+math(i, j, sub))
-    println("The result of division is: "+mathDouble(i, j, div))
+    println("The sum of your numbers is: " + math(i, j, add))
+    println("The result of subtraction is: " + math(i, j, sub))
+    println("The result of division is: " + mathDouble(i, j, div))
 
 
     val reader = Scanner(System.`in`)
@@ -60,6 +60,7 @@ fun main() {
         var q = when (y) {
             0 -> 5
             in 123..500 -> 6
+            1,2,3,4->666
             else -> 777
         }
         println("Number q is ${q}")
@@ -86,11 +87,13 @@ fun main() {
         var x = Math.random() * 10
 
         val res = equa(x)
+        println("The random value of x is: " + x)
         println("The value of $x * i ^ i is ${res}")
 
     }
 
     complexEquasion()
+
 
 
 }
@@ -99,7 +102,8 @@ fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
     return f(i, j)
 }
 
-fun mathDouble(i: Int, j:Int, f:(Int, Int) -> Double): Double {
+fun mathDouble(i: Int, j: Int, f: (Int, Int) -> Double): Double {
     return f(i, j)
 }
+
 
