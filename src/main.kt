@@ -1,4 +1,5 @@
 import java.util.Scanner
+import kotlin.math.pow
 
 fun main() {
 
@@ -6,10 +7,10 @@ fun main() {
     println("Please enter an integer")
     try {
         val addReader = Scanner(System.`in`)
-        var i = addReader.nextInt()
+        val i = addReader.nextInt()
 
         println("Please enter another integer")
-        var j = addReader.nextInt()
+        val j = addReader.nextInt()
 
 
         val add = { i: Int, j: Int -> i + j }
@@ -29,10 +30,9 @@ fun main() {
     print("Enter a whole number: ")
 
     try {
-        var x = reader.nextInt()
 
 
-        when (x) {
+        when (reader.nextInt()) {
             0 -> {
                 println("x is equal to zero")
 
@@ -61,14 +61,13 @@ fun main() {
     val readerA = Scanner(System.`in`)
     println("Enter a whole number: ")
     try {
-        val y = readerA.nextInt()
-        var q = when (y) {
+        val q = when (readerA.nextInt()) {
             0 -> 5
             in 123..500 -> 6
             1, 2, 3, 4 -> 666
             else -> 777
         }
-        println("Number q is ${q}")
+        println("Number q is $q")
 
     } catch (e: Exception) {
         println("You haven't entered an integer")
@@ -83,21 +82,21 @@ fun main() {
     println("is the i to the power of i real or imaginary?")
     println("")
 
-    fun complexEquasion() {
-        val equa: (Double) -> Double = { x: Double -> x * (Math.pow(Math.E, (-1 * (Math.PI / 2)))) }
+    fun complexEquation() {
+        val equa: (Double) -> Double = { x: Double -> x * (Math.E.pow((-1 * (Math.PI / 2)))) }
 
-        println("i to the power of i is equal to " + (Math.pow(Math.E, (-1 * (Math.PI / 2)))) + " and is real")
+        println("i to the power of i is equal to " + (Math.E.pow((-1 * (Math.PI / 2)))) + " and is real")
 
 
-        var x = Math.random() * 10
+        val x = Math.random() * 10
 
         val res = equa(x)
-        println("The random value of x is: " + x)
-        println("The value of $x * i ^ i is ${res}")
+        println("The random value of x is: $x")
+        println("The value of $x * i ^ i is $res")
 
     }
 
-    complexEquasion()
+    complexEquation()
 
     pointC()
 
@@ -129,13 +128,13 @@ fun numberToString() {
     try {
         println("Please enter an your name")
         val name = Scanner(System.`in`)
-        var a = name.next()
+        val a = name.next()
 
         println("Please enter an integer")
-        var b = name.nextInt()
+        val b = name.nextInt()
 
         println("Please enter another number")
-        var c = name.nextInt().toDouble()
+        val c = name.nextInt().toDouble()
 
         val f: (String, Int, Double) -> String = { a: String, b: Int, c: Double ->
             println("Hello " + a + " There is " + b * c + " PLN on your account")
