@@ -96,6 +96,13 @@ fun main() {
 
 
 
+
+
+
+    numberToString()
+
+
+
 }
 
 fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
@@ -106,4 +113,23 @@ fun mathDouble(i: Int, j: Int, f: (Int, Int) -> Double): Double {
     return f(i, j)
 }
 
+fun numberToString(){
+    println("Please enter an your name")
+    val name = Scanner(System.`in`)
+    var a = name.next()
+
+    println("Please enter an integer")
+    var b = name.nextInt()
+
+    println("Please enter another number")
+    var c = name.nextInt().toDouble()
+
+    val f:(String,Int,Double)->String = {
+            a:String,b:Int,c:Double->
+        println("Hello "+a+" There is "+b*c+" PLN on your account")
+        "$a $b $c"
+    }
+
+    println(f(a,b,c))
+}
 
