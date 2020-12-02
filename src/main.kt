@@ -43,18 +43,3 @@ fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
 fun mathDouble(i: Int, j: Int, f: (Int, Int) -> Double): Double {
     return f(i, j)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
