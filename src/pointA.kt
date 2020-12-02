@@ -28,3 +28,11 @@ fun pointA() {
     }
     exitProcess(0)
 }
+// Function defined below
+fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {
+    return f(i, j)
+}
+
+fun mathDouble(i: Int, j: Int, f: (Int, Int) -> Double): Double {
+    return f(i, j)
+}
