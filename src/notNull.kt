@@ -8,8 +8,8 @@ fun notNull() {
         val h = t.nextInt()
 
         if (h == 1) {
-
-            val table: Array<Int?> = arrayOf(1, 2, null, 3, 4, 5, null, null)
+            val z = (75025/46368.0)
+            val table: Array<Double?> = arrayOf(1.0, null, z , 2.0, null, Math.PI,  5.0, null, Math.E)
             val tableA = table.filterNotNull()
 
             println("This is a original table: " + table.asList())
@@ -23,6 +23,6 @@ fun notNull() {
         println("Just numbers please")
         notNull()
     }
-    main()
+    exitProcess(0)
 
 }
