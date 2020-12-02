@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.system.exitProcess
 
 fun pointC() {
     val readerA = Scanner(System.`in`)
@@ -16,5 +17,5 @@ fun pointC() {
         println("You haven't entered an integer")
         pointC()
     }
-    main()
+    exitProcess(0)
 }

@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.system.exitProcess
 
 fun pointA() {
     println("Simple sum")
@@ -25,5 +26,5 @@ fun pointA() {
         println("Something has gone wrong. Please make sure you entered an integer")
         pointA()
     }
-    main()
+    exitProcess(0)
 }

@@ -1,4 +1,5 @@
 import kotlin.math.pow
+import kotlin.system.exitProcess
 
 fun pointD() {
     println("And now, we will try something more advanced")
@@ -21,5 +22,5 @@ fun pointD() {
 
     }
     complexEquation()
-    main()
+    exitProcess(0)
 }

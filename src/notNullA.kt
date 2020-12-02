@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.system.exitProcess
 
 fun notNullA() {
 
@@ -18,5 +19,5 @@ fun notNullA() {
         println("Exception caught: Null Pointer Exception")
         notNullA()
     }
-    main()
+    exitProcess(0)
 }

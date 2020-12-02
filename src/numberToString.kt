@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.system.exitProcess
 
 fun numberToString() {
     try {
@@ -21,5 +22,5 @@ fun numberToString() {
     } catch (e: Exception) {
         numberToString()
     }
-main()
+    exitProcess(0)
 }

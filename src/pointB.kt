@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.system.exitProcess
 
 fun pointB() {
     val reader = Scanner(System.`in`)
@@ -32,5 +33,5 @@ fun pointB() {
         println("It is not a whole number")
         pointB()
     }
-    main()
+    exitProcess(0)
 }
