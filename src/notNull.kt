@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.reflect.jvm.internal.impl.resolve.constants.NullValue
 import kotlin.system.exitProcess
 
 fun notNull() {
@@ -14,8 +15,7 @@ fun notNull() {
 
             println("This is a original table: " + table.asList())
             println("This is a filtered one: " + tableA)
-
-            println(table.withIndex().filter{ table.set(value = null) == null }.map{ table.indexOf(element = Double) })
+            println(mutableListOf(table.elementAt(1))+ mutableListOf(table.elementAt(4))+mutableListOf(table.elementAt(7)))
 
 
 
@@ -32,6 +32,6 @@ fun notNull() {
 
 }
 
-private fun <T> Array<T>.set(value: T?): List<Nothing?> {
-    return listOf(element = null)
-}
+
+
+
