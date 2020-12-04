@@ -1,5 +1,4 @@
 import java.util.*
-import kotlin.reflect.jvm.internal.impl.resolve.constants.NullValue
 import kotlin.system.exitProcess
 
 fun notNull() {
@@ -13,13 +12,20 @@ fun notNull() {
             val table: Array<Double?> = arrayOf(1.0, null, z , 2.0, null, Math.PI,  5.0, null, Math.E)
             val tableA = table.filterNotNull()
 
+
             println("This is a original table: " + table.asList())
             println("This is a filtered one: " + tableA)
-            println(mutableListOf(table.elementAt(1))+ mutableListOf(table.elementAt(4))+mutableListOf(table.elementAt(7)))
 
+            val difference = table.filterNot { tableA.contains(it) }
 
+            println(difference)
 
-
+            for (number in table){
+                if((number == null)==true){
+                    println("You have found a null value ")
+                }
+            }
+            
         } else {
             exitProcess(0)
         }
@@ -31,6 +37,8 @@ fun notNull() {
     exitProcess(0)
 
 }
+
+
 
 
 
