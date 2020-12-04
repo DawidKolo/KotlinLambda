@@ -1,5 +1,4 @@
 import java.util.Scanner
-import kotlin.math.pow
 import kotlin.system.exitProcess
 
 fun main() {
