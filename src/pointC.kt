@@ -17,5 +17,6 @@ fun pointC() {
         println("You haven't entered an integer")
         pointC()
     }
-    exitProcess(0)
+    //exitProcess(0)
+    main()
 }

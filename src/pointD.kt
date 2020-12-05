@@ -22,5 +22,6 @@ fun pointD() {
 
     }
     complexEquation()
-    exitProcess(0)
+    //exitProcess(0)
+    main()
 }

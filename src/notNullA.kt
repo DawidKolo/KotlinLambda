@@ -6,7 +6,7 @@ fun notNullA() {
     println("Please enter any word")
     var wordParser = Scanner(System.`in`)
     var word = wordParser.next()
-    
+
     if (word.length < 2) {
         word = null
 
@@ -19,5 +19,6 @@ fun notNullA() {
         println("Exception caught: This word has no length")
         notNullA()
     }
-    exitProcess(0)
+    //exitProcess(0)
+    main()
 }

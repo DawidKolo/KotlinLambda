@@ -26,7 +26,8 @@ fun pointA() {
         println("Something has gone wrong. Please make sure you entered an integer")
         pointA()
     }
-    exitProcess(0)
+    //exitProcess(0)
+    main()
 }
 // Function defined below
 fun math(i: Int, j: Int, f: (Int, Int) -> Int): Int {

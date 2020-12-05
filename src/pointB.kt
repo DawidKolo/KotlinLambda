@@ -33,5 +33,6 @@ fun pointB() {
         println("It is not a whole number")
         pointB()
     }
-    exitProcess(0)
+    //exitProcess(0)
+    main()
 }

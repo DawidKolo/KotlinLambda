@@ -35,7 +35,8 @@ fun notNull() {
         notNull()
     }
 
-    exitProcess(0)
+    //exitProcess(0)
+    main()
 
 }
 

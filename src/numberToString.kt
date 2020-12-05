@@ -22,5 +22,6 @@ fun numberToString() {
     } catch (e: Exception) {
         numberToString()
     }
-    exitProcess(0)
+    // exitProcess(0)
+    main()
 }
