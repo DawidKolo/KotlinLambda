@@ -8,8 +8,8 @@ fun notNull() {
         val h = t.nextInt()
 
         if (h === 1) {
-            val z = (75025/46368.0)
-            val table: Array<Double?> = arrayOf(1.0, null, z , 2.0, null, Math.PI,  5.0, null, Math.E)
+            val z = (75025 / 46368.0)
+            val table: Array<Double?> = arrayOf(1.0, null, z, 2.0, null, Math.PI, 5.0, null, Math.E)
             val tableA = table.filterNotNull()
 
 
@@ -20,12 +20,12 @@ fun notNull() {
 
             println(difference)
 
-            for (number in table){
-                if((number == null)==true){
+            for (number in table) {
+                if (number == null) {
                     println("You have found a null value ")
                 }
             }
-            
+
         } else {
             exitProcess(0)
         }
