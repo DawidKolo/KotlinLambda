@@ -6,8 +6,10 @@ fun notNull() {
         println("Enter 1 to start notNull part of the program")
         val t = Scanner(System.`in`)
         val h = t.nextInt()
+        val array = IntArray (10){it -> it*it}
+        println(array.asList())
 
-        if (h === 1) {
+        if (h == 1) {
             val z = (75025 / 46368.0)
             val table: Array<Double?> = arrayOf(1.0, null, z, 2.0, null, Math.PI, 5.0, null, Math.E, null)
             val tableA = table.filterNotNull()
