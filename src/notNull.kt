@@ -9,12 +9,13 @@ fun notNull() {
 
         if (h === 1) {
             val z = (75025 / 46368.0)
-            val table: Array<Double?> = arrayOf(1.0, null, z, 2.0, null, Math.PI, 5.0, null, Math.E)
+            val table: Array<Double?> = arrayOf(1.0, null, z, 2.0, null, Math.PI, 5.0, null, Math.E, null)
             val tableA = table.filterNotNull()
-
+            val nullCount = table.count{it == null}
 
             println("This is a original table: " + table.asList())
             println("This is a filtered one: " + tableA)
+            println("Total number of nulls in the table is: " + nullCount)
 
             val difference = table.filterNot { tableA.contains(it) }
 
