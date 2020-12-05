@@ -11,7 +11,7 @@ fun pointD() {
     fun complexEquation() {
         val equa: (Double) -> Double = { x: Double -> x * (Math.E.pow((-1 * (Math.PI / 2)))) }
 
-        println("i to the power of i is equal to " + (Math.E.pow((-1 * (Math.PI / 2)))) + " and is real")
+        println("i to the power of i is equal to " + (Math.E.pow((-1 * (Math.PI / 2)))) + " and is Real number")
 
 
         val x = Math.random() * 10
